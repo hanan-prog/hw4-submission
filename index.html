@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <title>OpenGL Basics - HW4</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Homework 4 Submission</h1>
+      <h2>Hanan Abdirahman</h2>
+    </header>
+
+    <main>
+     
+     
+      <section id="demos">
+       <ul>
+        <li>
+            <p><em>TriangleColored.cpp</em></p>
+          <img src="./images/triangleColored.png">
+        </li>
+        <li>
+          <p></p>
+        </li>
+       </ul>
+      </section>
+
+     
+
+      <!-- Section B: Questions (sentence or two per question) -->
+      <section id="questions">
+        <h2>Section B: Written Questions</h2>
+
+        <div id="questions">
+          <h3>Q1</h3>
+          <p>
+            Theres no order to the cube faces we see, we can't tell which color represeents the top or bottom part of our cube. 
+            With the depth test we were rendering triangles based on their distance from us which gave us our ordering of faces,
+            removing it results in a 3d cube being rendered without any specific ordering of which side. 
+          </p>
+        </div>
+
+        <div id="questions">
+          <h3>Q2</h3>
+          <p>
+            This line where we are checking if the escape key is pressed <code>windowEvent.key.key == SDLK_ESCAPE</code> to <code>windowEvent.key.key == SDLK_Q</code>
+          </p>
+        </div>
+
+        <div id="questions">
+          <h3>Q3</h3>
+          <p>
+            Where we set the lightdir in the fragement source, changed it from <code> "const vec3 lightDir = vec3(0,1,1);"</code> to <code> "const vec3 lightDir = vec3(0,1,-1);"</code>
+          </p>
+        </div>
+
+        <div id="questions">
+          <h3>Q4: Rendering of large triangle</h3>
+          <img src="temp">
+        </div>
+
+     
+      <section id="extra-credit">
+        <h2>Extra Credit</h2>
+
+       
+      </section>
+    </main>
+
+    
+  </body>
+</html>
