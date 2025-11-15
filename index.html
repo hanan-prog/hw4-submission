@@ -13,41 +13,45 @@
     </header>
 
     <main class="content">
+      <section class="overview">
+        <h2>Description</h2>
+        <p>
+          The first section contains videos and images of the OpenGL demos
+          running, and the second section provides answers to the homework
+          questions. I completed the first extra credit task by modifying the
+          camera position in response to keyboard inputs in the cube3d.cpp demo.
+          The video and implementation details are included below.
+        </p>
+      </section>
       <section class="demos">
         <h2>Section A: Running Demos</h2>
-       <ul>
-        <li>
-          <p><em>TriangleColored.cpp</em></p>
-          <img src="./images/triangleColored.png">
-        </li>
-        <li>
-          <p><em>Cube3D.cpp</em></p>
-          <video autoplay loop muted playsinline>
-            <source
-              src="images/cube3d.mov"
-              type="video/quicktime"
-            />
-          </video>
-        </li>
+        <ul>
+          <li>
+            <p><em>TriangleColored.cpp</em></p>
+            <img src="./images/triangleColored.png" />
+          </li>
+          <li>
+            <p><em>Cube3D.cpp</em></p>
+            <video autoplay loop muted playsinline>
+              <source src="images/cube3d.mov" type="video/quicktime" />
+            </video>
+          </li>
 
-        <li>
-          <p><em>CubeLit.cpp</em></p>
-          <video autoplay loop muted playsinline>
-            <source
-              src="images/cubelit.mov"
-              type="video/quicktime"
-            />
-          </video>
-        </li>
+          <li>
+            <p><em>CubeLit.cpp</em></p>
+            <video autoplay loop muted playsinline>
+              <source src="images/cubelit.mov" type="video/quicktime" />
+            </video>
+          </li>
 
-        <li>
-          <p><em>ModelLoad.cpp</em></p>
-          <div class="two_models">
-            <img src="./images/teapot.png">
-            <img src="./images/sphere.png">
-          </div>
-          
-          <!-- <div>
+          <li>
+            <p><em>ModelLoad.cpp</em></p>
+            <div class="two_models">
+              <img src="./images/teapot.png" />
+              <img src="./images/sphere.png" />
+            </div>
+
+            <!-- <div>
             <p>teapot</p>
             <img src="./images/teapot.png">
           </div>
@@ -56,9 +60,8 @@
             <p>sphere</p>
             <img src="./images/sphere.png">
           </div> -->
-          
-        </li>
-       </ul>
+          </li>
+        </ul>
       </section>
 
       <section class="questions">
@@ -67,39 +70,75 @@
         <div class="questions">
           <h3>Q1</h3>
           <p>
-            Theres no order to the cube faces we see, we can't tell which color represeents the top or bottom part of our cube. 
-            With the depth test we were rendering triangles based on their distance from us which gave us our ordering of faces,
-            removing it results in a 3d cube being rendered without any specific ordering of which side. 
+            Without depth testing, the cube's faces have no meaningful
+            order—there's no way to tell which color represents the top, bottom,
+            or any other side. With depth testing enabled, the GPU renders
+            triangles based on their distance from the camera, producing the
+            correct ordering of faces.
           </p>
         </div>
 
         <div class="questions">
           <h3>Q2</h3>
           <p>
-            This line where we are checking if the escape key is pressed <code>windowEvent.key.key == SDLK_ESCAPE</code> to <code>windowEvent.key.key == SDLK_Q</code>
+            This line where we are checking if the escape key is pressed
+            <code>windowEvent.key.key == SDLK_ESCAPE</code> to
+            <code>windowEvent.key.key == SDLK_Q</code>
           </p>
         </div>
 
         <div class="questions">
           <h3>Q3</h3>
           <p>
-            Where we set the lightdir in the fragement source, changed it from <code> "const vec3 lightDir = vec3(0,1,1);"</code> to <code> "const vec3 lightDir = vec3(0,1,-1);"</code>
+            Where we set the lightdir in the fragement source, changed it from
+            <code> "const vec3 lightDir = vec3(0,1,1);"</code> to
+            <code> "const vec3 lightDir = vec3(0,1,-1);"</code>
           </p>
         </div>
 
         <div class="questions">
           <h3>Q4: Rendering of large triangle</h3>
-          <img src="temp">
+          <img src="images/largeTriangle" />
         </div>
       </section>
-     
+
       <section class="extra-credit">
         <h2>Extra Credit</h2>
-
-       
+        <ul>
+          <li>
+            <p>
+              I added support for the up, down,
+              left, and right arrow keys in cube3d.cpp. Based on the key
+              pressed, the camera's position is updated accordingly. Pressing
+              left or right moves the camera horizontally in those directions,
+              while pressing up moves the camera forward (zooming in). Pressing
+              down moves the camera backward.
+            </p>
+            <div>
+              <p>added the following lines to <em>Cube3D.cpp</em></p>
+              <p>
+                defined global variables for the camera position, forward, right
+                and up vectors
+              </p>
+              <img src="images/global_cam.png" />
+              <p>logic for keyboard inputs</p>
+              <img
+                src="images/keyboard_input.png"
+                style="width: 400px; height: 400px"
+              />
+              <p>
+                camera matrix is our global parameters, the look at point is a
+                combination of cameras position and the forward vector
+              </p>
+              <img src="images/camera_view.png" />
+            </div>
+            <p>video of the program running</p>
+            <video autoplay loop muted playsinline>
+              <source src="images/cube3dkeyboard.mov" type="video/quicktime" />
+            </video>
+          </li>
+        </ul>
       </section>
     </main>
-
-    
   </body>
 </html>
