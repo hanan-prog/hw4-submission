@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+    <link rel="stylesheet" href="style.css" />
     <title>OpenGL Basics - HW4</title>
   </head>
   <body>
@@ -12,28 +12,59 @@
       <h2>Hanan Abdirahman</h2>
     </header>
 
-    <main>
-     
-     
-      <section id="demos">
+    <main class="content">
+      <section class="demos">
+        <h2>Section A: Running Demos</h2>
        <ul>
         <li>
-            <p><em>TriangleColored.cpp</em></p>
+          <p><em>TriangleColored.cpp</em></p>
           <img src="./images/triangleColored.png">
         </li>
         <li>
-          <p></p>
+          <p><em>Cube3D.cpp</em></p>
+          <video autoplay loop muted playsinline>
+            <source
+              src="images/cube3d.mov"
+              type="video/quicktime"
+            />
+          </video>
+        </li>
+
+        <li>
+          <p><em>CubeLit.cpp</em></p>
+          <video autoplay loop muted playsinline>
+            <source
+              src="images/cubelit.mov"
+              type="video/quicktime"
+            />
+          </video>
+        </li>
+
+        <li>
+          <p><em>ModelLoad.cpp</em></p>
+          <div class="two_models">
+            <img src="./images/teapot.png">
+            <img src="./images/sphere.png">
+          </div>
+          
+          <!-- <div>
+            <p>teapot</p>
+            <img src="./images/teapot.png">
+          </div>
+
+          <div>
+            <p>sphere</p>
+            <img src="./images/sphere.png">
+          </div> -->
+          
         </li>
        </ul>
       </section>
 
-     
-
-      <!-- Section B: Questions (sentence or two per question) -->
-      <section id="questions">
+      <section class="questions">
         <h2>Section B: Written Questions</h2>
 
-        <div id="questions">
+        <div class="questions">
           <h3>Q1</h3>
           <p>
             Theres no order to the cube faces we see, we can't tell which color represeents the top or bottom part of our cube. 
@@ -42,27 +73,27 @@
           </p>
         </div>
 
-        <div id="questions">
+        <div class="questions">
           <h3>Q2</h3>
           <p>
             This line where we are checking if the escape key is pressed <code>windowEvent.key.key == SDLK_ESCAPE</code> to <code>windowEvent.key.key == SDLK_Q</code>
           </p>
         </div>
 
-        <div id="questions">
+        <div class="questions">
           <h3>Q3</h3>
           <p>
             Where we set the lightdir in the fragement source, changed it from <code> "const vec3 lightDir = vec3(0,1,1);"</code> to <code> "const vec3 lightDir = vec3(0,1,-1);"</code>
           </p>
         </div>
 
-        <div id="questions">
+        <div class="questions">
           <h3>Q4: Rendering of large triangle</h3>
           <img src="temp">
         </div>
-
+      </section>
      
-      <section id="extra-credit">
+      <section class="extra-credit">
         <h2>Extra Credit</h2>
 
        
